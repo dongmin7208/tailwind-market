@@ -5,13 +5,27 @@ const Home: NextPage = () => {
     <div className='grid min-h-screen gap-10 bg-slate-400 py-20 px-20'>
       <div className='flex flex-col rounded-3xl bg-white p-6 shadow-xl'>
         <span className='text-2xl font-semibold'>Select Item</span>
+        <ul>
+          {[1, 2, 3, 4, 5].map((i) => (
+            // <div
+            //   key={i}
+            //   className='flex justify-between first:bg-blue-50 last:bg-blue-50 only:bg-red-500'
+            //  odd:bg-blue-50 even:bg-yellow-500<<<<<
+            // >
+            <div key={i} className='my-2 flex justify-between'>
+              <span className='text-gray-500'>wood</span>
+              <span className='font-semibold'>$5</span>
+            </div>
+          ))}
+        </ul>
+        {['a', 'b', 'c', ''].map((c, i) => (
+          <li className='list-none bg-red-500 py-2 empty:hidden' key={i}>
+            {c}
+          </li>
+        ))}
         <div className='my-2 flex justify-between'>
           <span className='text-gray-500'>Realforce</span>
           <span className='font-semibold'>$190</span>
-        </div>
-        <div className='flex justify-between'>
-          <span className='text-gray-500'>wood</span>
-          <span className='font-semibold'>$5</span>
         </div>
         <div className='mt-2 flex justify-between border-t-2 border-dashed pt-2'>
           <span>Total</span>
@@ -21,7 +35,7 @@ const Home: NextPage = () => {
           Checkout
         </button>
       </div>
-      <div className='overflow-hidden rounded-3xl bg-white shadow-xl'>
+      <div className='group overflow-hidden rounded-3xl bg-white shadow-xl'>
         <div className='bg-blue-500 p-6 pb-14'>
           <span className='text-2xl text-white'>Profile</span>
         </div>
@@ -38,7 +52,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className='relative -mt-14 -mb-5 flex flex-col items-center'>
-            <span className='text-lg font-medium'>Tony Molloy</span>
+            <span className='text-lg font-medium'>Park dongmin</span>
             <span className='text-sm text-gray-500'>korea</span>
           </div>
         </div>
@@ -57,9 +71,18 @@ const Home: NextPage = () => {
           <span className='text-xs text-gray-500'>Chair</span>
           <div className='mt-3 mb-5 flex items-center justify-between'>
             <div className='space-x-2'>
-              <button className='h-5 w-5 rounded-full bg-blue-500 ring-blue-500 ring-offset-2 transition focus:ring-2' />
-              <button className='h-5 w-5 rounded-full bg-red-500 ring-red-500 ring-offset-2 transition focus:ring-2' />
-              <button className='h-5 w-5 rounded-full bg-orange-500 ring-orange-500 ring-offset-2 transition focus:ring-2' />
+              <button
+                title='button'
+                className='h-5 w-5 rounded-full bg-blue-500 ring-blue-500 ring-offset-2 transition focus:ring-2'
+              />
+              <button
+                title='button'
+                className='h-5 w-5 rounded-full bg-red-500 ring-red-500 ring-offset-2 transition focus:ring-2'
+              />
+              <button
+                title='button'
+                className='h-5 w-5 rounded-full bg-orange-500 ring-orange-500 ring-offset-2 transition focus:ring-2'
+              />
             </div>
             <div className='flex items-center space-x-5'>
               <button className='flex aspect-square w-8 items-center justify-center rounded-lg bg-blue-200 text-xl text-gray-500'>
