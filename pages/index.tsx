@@ -2,17 +2,19 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className='grid min-h-screen gap-10 bg-slate-400 py-20 px-20'>
-      <div className='rounded-3xl bg-white p-6 shadow-xl sm:bg-red-400 sm:hover:bg-pink-800 md:bg-teal-400  lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500'>
-        <span className='text-2xl font-semibold'>Select Item</span>
+    <div className='grid min-h-screen gap-10 bg-slate-400 py-20 px-20 lg:grid-cols-2 xl:grid-cols-3 xl:place-content-center'>
+      <div className='flex flex-col justify-between rounded-3xl bg-white p-6 shadow-xl dark:bg-black'>
+        <span className='text-2xl font-semibold dark:text-white'>
+          Select Item
+        </span>
         <ul>
           <div className='my-2 flex justify-between '>
-            <span className='text-gray-500'>Grey Chair</span>
-            <span className='font-semibold'>$19</span>
+            <span className='text-gray-500 dark:text-gray-100'>Grey Chair</span>
+            <span className='font-semibold dark:text-white'>$19</span>
           </div>
           <div className='my-2 flex justify-between '>
-            <span className='text-gray-500'>red Chair</span>
-            <span className='font-semibold'>$19</span>
+            <span className='text-gray-500 dark:text-gray-100'>Grey Chair</span>
+            <span className='font-semibold dark:text-white'>$19</span>
           </div>
         </ul>
 
@@ -21,17 +23,17 @@ const Home: NextPage = () => {
           <span className='font-semibold'>$10</span>
         </div>
         <button
-          className='mx-auto mt-5 block w-3/4
-          rounded-xl bg-blue-500 p-3 text-center text-white 
-          hover:bg-teal-500 hover:text-black
-          focus:bg-red-500 active:bg-yellow-500
+          className='mx-auto mt-5 block w-3/4 rounded-xl bg-blue-500 p-3
+          text-center text-white hover:bg-teal-500 hover:text-black focus:bg-red-500 
+          active:bg-yellow-500 dark:border dark:border-white 
+          dark:bg-black dark:hover:bg-white
           '
         >
           Checkout
         </button>
       </div>
       <div className='group overflow-hidden rounded-3xl bg-white shadow-xl'>
-        <div className='bg-blue-500 p-6 pb-14'>
+        <div className='p-6 pb-14 xl:pb-40 portrait:bg-indigo-600 landscape:bg-teal-500'>
           <span className='text-2xl text-white'>Profile</span>
         </div>
         <div className='relative -top-5 rounded-3xl bg-white p-6'>
@@ -47,12 +49,12 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className='relative  -mt-14 -mb-5 flex flex-col items-center'>
-            <span className='text-lg font-medium'>dongmin park</span>
-            <span className='text-sm text-gray-500'>korea</span>
+            <span className='text-lg font-medium'>Tony Molloy</span>
+            <span className='text-sm text-gray-500'>미국</span>
           </div>
         </div>
       </div>
-      <div className='rounded-3xl bg-white p-6 shadow-xl'>
+      <div className='rounded-3xl bg-white p-6 shadow-xl lg:col-span-2 xl:col-span-1'>
         <div className='mb-5 flex items-center justify-between'>
           <span>⬅️</span>
           <div className='space-x-3'>
@@ -62,8 +64,8 @@ const Home: NextPage = () => {
         </div>
         <div className='mb-5 h-72 bg-zinc-400' />
         <div className='flex flex-col'>
-          <span className='text-xl font-medium'>share Lounge</span>
-          <span className='text-xs text-gray-500'>realforce</span>
+          <span className='text-xl font-medium'>Swoon Lounge</span>
+          <span className='text-xs text-gray-500'>Chair</span>
           <div className='mt-3 mb-5 flex items-center justify-between'>
             <div className='space-x-2'>
               <button className='h-5 w-5 rounded-full bg-yellow-500 ring-yellow-500 ring-offset-2 transition focus:ring-2' />
