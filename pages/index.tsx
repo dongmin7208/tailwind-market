@@ -3,7 +3,14 @@ import type { NextPage } from 'next';
 const Home: NextPage = () => {
   return (
     <div className='grid min-h-screen gap-10 bg-slate-400 py-20 px-20'>
-      <div className='flex flex-col rounded-3xl bg-white p-6 shadow-xl'>
+      <div className=' flex flex-col space-y-2 p-5'>
+        <input
+          type='file'
+          aria-label='label'
+          className='transition-colors file:cursor-pointer file:rounded-xl file:border-0 file:bg-purple-400 file:px-5 file:text-white file:hover:border file:hover:border-purple-400 file:hover:bg-white file:hover:text-purple-400'
+        />
+      </div>
+      <div className='flex flex-col rounded-3xl bg-white p-6 shadow-xl sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-yellow-400 2xl:bg-pink-500'>
         <span className='text-2xl font-semibold'>Select Item</span>
         <ul>
           {[1, 2, 3, 4, 5].map((i) => (
