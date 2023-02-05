@@ -5,14 +5,32 @@ export default function Enter() {
   const onEmailClick = () => setMethod('email');
   const onPhoneClick = () => setMethod('phone');
   return (
-    <div>
-      <h3>Enter to Carrot</h3>
-      <div>
-        <div>
-          <h5>Enter using:</h5>
-          <div>
-            <button onClick={onEmailClick}>Email</button>
-            <button onClick={onPhoneClick}>Phone</button>
+    <div className='mt-16'>
+      <h3 className='text-center text-3xl font-bold'>Enter to Carrot</h3>
+      <div className='mt-8'>
+        <div className='flex flex-col items-center'>
+          <h5 className='text-sm font-medium text-gray-500'>Enter using:</h5>
+          <div className='mt-8 grid w-full grid-cols-2 gap-16 border-b'>
+            <button
+              className={`pb-4 font-medium ${
+                method === 'email'
+                  ? 'border-b-2 border-orange-500 text-orange-400'
+                  : ''
+              }`}
+              onClick={onEmailClick}
+            >
+              Email
+            </button>
+            <button
+              className={`pb-4 font-medium ${
+                method === 'phone'
+                  ? 'border-b-2 border-orange-500 text-orange-400'
+                  : ''
+              }`}
+              onClick={onEmailClick}
+            >
+              Phone
+            </button>
           </div>
         </div>
         <form>
